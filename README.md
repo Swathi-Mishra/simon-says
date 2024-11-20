@@ -4,11 +4,11 @@ Description
 A fun and interactive memory game built with HTML, CSS, and JavaScript. Test your memory and challenge your skills by following the patterns of colored buttons!
 
 Features
-  Dark Mode: Toggle between light and dark themes for a customizable game experience.
-  Sound Effects: Uses the Web Audio API to generate realistic sounds for each button press.
-  Responsive Design: Adapts for mobile devices, providing a smooth experience on phones and tablets.
-  Score Tracking: Tracks your scores and high scores using localStorage.
-  Real-Time Feedback: Provides visual and audio feedback for each button press, whether correct or incorrect.
+  1. Dark Mode: Toggle between light and dark themes for a customizable game experience.
+  2. Sound Effects: Uses the Web Audio API to generate realistic sounds for each button press.
+  3. Responsive Design: Adapts for mobile devices, providing a smooth experience on phones and tablets.
+  4. Score Tracking: Tracks your scores and high scores using localStorage.
+  5. Real-Time Feedback: Provides visual and audio feedback for each button press, whether correct or incorrect.
 
 How to Play
 1. Press any key to start the game.
