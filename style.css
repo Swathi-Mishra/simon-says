@@ -1,0 +1,271 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #ffffff; /* Change text color to white in dark mode */
+}
+
+header.dark h1,
+footer.dark p,
+main.dark h2 {
+    color: #ffffff;
+}
+
+.btn-container.dark .btn {
+    border-color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #444;
+    flex-grow: 1; /* Make the title take up available space */
+    padding-left: 8rem;
+}
+
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+}
+
+/* Dark Mode Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    background-color: white;
+    border-radius: 50%;
+    bottom: 3.5px;
+    left: 4px;
+    transition: 0.4s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+    box-shadow: 0 0 15px rgba(102, 187, 106, 0.7);
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+footer{
+    padding: 10px;
+}
+
+footer p{
+    font-size: medium;
+    font-weight: bold;
+    background-color: rgb(111, 177, 177);
+}
+
+/* Button Container */
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+    border: 5px solid #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Colors */
+.red { background-color: #ff4d4d; }
+.yellow { background-color: #ffcc00; }
+.green { background-color: #33cc33; }
+.purple { background-color: #9966ff; }
+
+/* Flash Effects */
+.flash { background-color: #ffffff !important; }
+.userflash { background-color: #cccccc !important; }
+
+/* Dark Mode */
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header.dark {
+    background-color: #1f1f1f;
+}
+
+.btn-container.dark .btn {
+    border-color: #ffffff;
+}
+/* Dark Mode for Text */
+body.dark h2 {
+    color: #ffffff; /* Ensure the text is visible in dark mode */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn-container {
+        grid-template-columns: repeat(2, 120px);
+        grid-gap: 15px;
+    }
+
+    .btn {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .btn-container {
+        grid-template-columns: repeat(2, 100px);
+        grid-gap: 10px;
+    }
+
+    .btn {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+
+
+
+/* body{
+    text-align: center;
+}
+.btn{
+    height: 200px;
+    width: 200px;
+    border: 10px solid black;
+    border-radius: 20%;
+    margin: 2.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+.red{
+    background-color: #d95980;
+}
+.yellow{
+    background-color: #f99b45;
+}
+.green{
+    background-color: #63aac0;
+}
+.purple{
+    background-color: #819ff9;
+}
+
+.flash{
+    background-color: white;
+}
+
+.userflash{
+    background-color: green;
+}
+
+@media (max-width: 600px) {
+    .btn {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+ */
